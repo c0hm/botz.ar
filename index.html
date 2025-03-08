@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botz.ar - Lista de Bots</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Signika:wght@400;600&display=swap" rel="stylesheet">
+    <title>Botz.ar - Todo lo que pueda ser un bot, será un bot.</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Signika:wght@400;600&display=swap"
+        rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -15,31 +18,34 @@
             text-align: center;
         }
 
-        .logo-container {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .logo {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            padding: 5px 15px;
+            border-radius: 8px;
         }
 
-        .logo {
+        .logo-text {
             font-family: 'Signika', sans-serif;
-            font-size: 3rem;
-            font-weight: 600;
-            color: #25D366;
-            background: linear-gradient(90deg, #25D366, #1ebe5b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+            font-size: 3.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(29, 12, 12, 0.5);
+            display: block;
+            text-transform: uppercase;
         }
 
         .slogan {
             font-size: 1.2rem;
-            color: #b0b0b0;
             font-style: italic;
-            margin-top: 5px;
-            border-top: 2px solid #25D366;
-            padding-top: 5px;
+            padding: 5px 15px;
+            border: 2px solid rgba(32, 184, 87, 0.5);
+            border-radius: 20px;
+            background: rgba(32, 184, 87, 0.05);
+            display: inline-block;
+        }
+
+        .shadow {
+            filter: drop-shadow(rgb(0, 0, 0) 0px 0px 3px);
         }
 
         .container {
@@ -79,23 +85,33 @@
 
         .bot-card p {
             font-size: 1rem;
-            color: #b0b0b0;
             margin-bottom: 15px;
         }
 
         .bot-button {
             display: inline-block;
             padding: 10px 15px;
-            background: #25D366;
-            color: #fff;
+            background: #1a9546;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
             transition: background 0.3s ease;
+            text-shadow:
+                -1px -1px 0 #00000080,
+                1px -1px 0 #00000080,
+                -1px 1px 0 #00000080,
+                1px 1px 0 #00000080;
+            filter: drop-shadow(rgb(0, 0, 0) 0px 0px 3px);
+            letter-spacing: 2px;
+            color: #f4f4f4;
+        }
+
+        .bot-button div {
+            filter: drop-shadow(rgb(0, 0, 0) 0px 0px 3px);
         }
 
         .bot-button:hover {
-            background: #1ebe5b;
+            background: #20B857;
         }
 
         .promo {
@@ -111,7 +127,7 @@
         }
 
         .promo a {
-            color: #25D366;
+            color: #20B857;
             font-weight: bold;
             text-decoration: none;
         }
@@ -121,47 +137,106 @@
         }
     </style>
 </head>
-<body>
 
-    <div class="logo-container">
-        <div class="logo">Botz.ar</div>
-        <p class="slogan">Todo lo que pueda ser un bot, será un bot.</p>
+<body>
+    <div class="logo">
+        <div class="logo-text shadow">Botz.ar</div>
+        <div class="slogan shadow">
+            <div class="slogan-text shadow">Todo lo que pueda ser un bot, será un bot.</div>
+        </div>
     </div>
 
     <div class="container">
         <div class="bots-list">
             <script>
                 const bots = [
-                    { nombre: "Bot de Soporte", desc: "Responde preguntas frecuentes.", numero: "5491112345678", img: "https://robohash.org/soporte.png?size=80x80" },
-                    { nombre: "Bot de Ventas", desc: "Te ayuda a gestionar ventas.", numero: "5491123456789", img: "https://robohash.org/ventas.png?size=80x80" },
-                    { nombre: "Bot de Reservas", desc: "Agenda citas automáticamente.", numero: "5491134567890", img: "https://robohash.org/reservas.png?size=80x80" },
-                    { nombre: "Bot de Atención", desc: "Brinda información sobre tu negocio.", numero: "5491145678901", img: "https://robohash.org/atencion.png?size=80x80" },
-                    { nombre: "Bot de Pedidos", desc: "Gestiona pedidos y entregas.", numero: "5491156789012", img: "https://robohash.org/pedidos.png?size=80x80" },
-                    { nombre: "Bot de Encuestas", desc: "Realiza encuestas automáticas.", numero: "5491167890123", img: "https://robohash.org/encuestas.png?size=80x80" },
-                    { nombre: "Bot de Recordatorios", desc: "Envía recordatorios a clientes.", numero: "5491178901234", img: "https://robohash.org/recordatorios.png?size=80x80" },
-                    { nombre: "Bot de Noticias", desc: "Envía noticias y actualizaciones.", numero: "5491189012345", img: "https://robohash.org/noticias.png?size=80x80" },
-                    { nombre: "Bot de Promociones", desc: "Difunde ofertas y descuentos.", numero: "5491190123456", img: "https://robohash.org/promociones.png?size=80x80" },
-                    { nombre: "Bot de Fidelización", desc: "Programa recompensas para clientes.", numero: "5491201234567", img: "https://robohash.org/fidelizacion.png?size=80x80" }
+                    {
+                        nombre: "Astroia",
+                        desc: `Soy AstroIA, tu astrólogo digital sin filtros ni vueltas. Místico, porteño y directo, te cuento lo que tu carta astral dice sobre vos con la crudeza y la ironía justa, sin caretas ni humo.
+            
+            🌌 ¿Qué puedo hacer por vos?
+            ✨ Revelarte los secretos de tu carta astral
+            ❤️ Decirte qué onda con el amor, el deseo y la compatibilidad
+            🔥 Analizar tu propósito de vida según los astros
+            🔭 Predecir influencias cósmicas basadas en tu configuración astral
+            
+            Nada de horóscopos genéricos ni frases vacías. Acá te tiro la posta. ¿Listo para saber qué dicen los astros sobre vos? 🚀♑♈♏`,
+                        numero: "5491151646778",
+                        img: "astroia.jpg",
+                        botonTexto: "Consultar mi Carta Astral"
+                    },
+                    {
+                        nombre: "La Clito",
+                        desc: `🔥 ¿Querés mejorar tu vida sexual sin vueltas ni tabúes? 🔥
+            
+            Conocé a La Clito, la sexóloga asistente de Luz Miguelez (@luz.psicosex) 🤩. Directa, sin pelos en la lengua y con toda la info que necesitás para disfrutar más del sexo, el placer y los orgasmos.
+            
+            💬 Respondé todas tus dudas sin vergüenza.
+            📖 Recibí consejos prácticos y guías de primera.
+            😂 Hablá con alguien que te dice las cosas como son, con humor y sin caretaje.
+            
+            Porque el sexo es para disfrutarlo, no para sufrirlo. ¡Escribime y hablemos sin tabúes! 😏🔥`,
+                        numero: "5491140901428",
+                        img: "clito.jpg",
+                        botonTexto: "Hablemos sin tabúes"
+                    },
+                    {
+                        nombre: "GineBot",
+                        desc: `🌸 Tu salud ginecológica, con información clara y confiable 🌸
+            
+            Soy GineBot, el asistente virtual del Dr. Alejandro M. Salvó. Estoy acá para responder todas tus dudas sobre ginecología y salud femenina de forma clara, profesional y cercana.
+            
+            🔹 Consultas sobre salud ginecológica
+            🔹 Información confiable basada en evidencia
+            🔹 Orientación sobre controles y prevención
+            
+            📌 No reemplazo una consulta médica, pero te ayudo a entender mejor tu salud y te oriento sobre los pasos a seguir.`,
+                        numero: "5491141802706",
+                        img: "ginebot.jpg",
+                        botonTexto: "Consultar sobre ginecología"
+                    },
+                    {
+                        nombre: "Barto",
+                        desc: `🔥 Barto: el bot que no te va a endulzar la oreja 🔥
+            
+            Soy Barto, un chatbot porteño sin filtros ni diplomacia. Acá no hay vueltas, te digo la posta como es, con humor negro, sarcasmo y puteadas cuando hace falta.
+            
+            🤬 Si algo es una cagada, te lo voy a decir.
+            💀 Si la vida te da una patada, te ayudo a reírte y seguir.
+            🍻 Si solo querés charlar y bardear un rato, bienvenido.
+            
+            No esperes respuestas políticamente correctas ni pavadas motivacionales. ¿Querés la verdad sin chamuyo? Acá estoy. 🚬`,
+                        numero: "",
+                        img: "barto.jpg",
+                        botonTexto: "Bardeemos un rato"
+                    },
                 ];
 
                 bots.forEach(bot => {
+                    const disabled = bot.numero === "" ? 'style="pointer-events: none; opacity: 0.5;"' : "";
+                    const link = bot.numero ? `href="https://wa.me/${bot.numero}?text=Hola"` : "javascript:void(0)";
+
                     document.write(`
-                        <div class="bot-card">
-                            <img class="bot-avatar" src="${bot.img}" alt="Avatar de ${bot.nombre}">
-                            <h2>${bot.nombre}</h2>
-                            <p>${bot.desc}</p>
-                            <a class="bot-button" href="https://wa.me/${bot.numero}?text=Hola" target="_blank">Probar</a>
-                        </div>
-                    `);
+            <div class="bot-card">
+                <img class="bot-avatar shadow" src="${bot.img}" alt="Avatar de ${bot.nombre}">
+                <h2 class="shadow">${bot.nombre}</h2>
+                <p class="shadow">${bot.desc.replace(/\n/g, '<br>')}</p>
+                <a class="bot-button shadow" ${link} ${disabled} target="_blank">
+                    <div>${bot.botonTexto}</div>
+                </a>
+            </div>
+        `);
                 });
             </script>
+
         </div>
 
         <div class="promo">
-            <p>¿Querés tu propio bot de WhatsApp?</p>
-            <p><a href="https://wa.me/5491112345678?text=Hola,%20quiero%20un%20bot">Consultanos aquí</a></p>
+            <p class="shadow">¿Querés tu propio bot de WhatsApp?</p>
+            <p><a class="shadow" href="https://wa.me/5491141650904?text=Hola,%20quiero%20un%20bot">Consultanos aquí</a>
+            </p>
         </div>
     </div>
-
 </body>
+
 </html>
